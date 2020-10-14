@@ -288,11 +288,11 @@ procedure RedrawScreen(); begin
     while currentNum = randNum do begin
       randNum:=random(0, arrH.Length-1);
     end;
-    if (randNum <= arrH.Length-1) then RectH.Text:='' + arrH[randNum];
-    if (enableTranslation = true) then if (randNum <= arrT.Length-1) then RectT.Text:='' + arrT[randNum];
+    if (randNum <= arrH.Length-1) and (arrH.Length > 1) then RectH.Text:='' + arrH[randNum];
+    if (enableTranslation = true) then if (randNum <= arrT.Length-1) and (arrT.Length > 1) then RectT.Text:='' + arrT[randNum];
     if (enableTranslation = false) and (menu = true) then if (randNum <= arrT.Length-1) then RectT.Text:='' + arrT[randNum];
-    if (enablePinyin = true) then if (randNum <= arrP.Length-1) then RectP.Text:='' + arrP[randNum];
-    if (enablePinyin = false) and (menu2 = true) then if (randNum <= arrP.Length-1) then RectP.Text:='' + arrP[randNum];
+    if (enablePinyin = true) then if (randNum <= arrP.Length-1) and (arrP.Length > 1) then RectP.Text:='' + arrP[randNum];
+    if (enablePinyin = false) and (menu2 = true) then if (randNum <= arrP.Length-1) and (arrP.Length > 1) then RectP.Text:='' + arrP[randNum];
   end;
 end;
 
