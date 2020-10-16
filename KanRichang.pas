@@ -160,7 +160,7 @@ procedure setWindow(width, height: integer; position: string); begin
     SettingsButton.BorderColor:=Color.DarkGray;
   end;
   
-  RectP.FontStyle:=FontStyleType.fsBold;
+  //RectP.FontStyle:=FontStyleType.fsBold;
   RectH.FontName:='SimSun';
   RectP.FontName:='Calibri';
   RectT.FontName:=handler_font;
