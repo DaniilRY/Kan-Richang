@@ -121,15 +121,15 @@ procedure setWindow(width, height: integer; position: string); begin
   MainForm.TopMost:=enadleTopMost;
   MainForm.FormBorderStyle:=FormBorderStyle.None;
   MainForm.TransparencyKey:=color.Azure;
-  Window.SetSize(width, height);
+  Window.SetSize(width, height-25);
   setPosition(position);
   
   BackgroundRect:=RectangleABC.Create(0, 0, window.Width - 1, window.Height - 1, color.WhiteSmoke);
   BackgroundRect.BorderWidth:=1;
   
-  CloseButton:=RectangleABC.Create(window.Width - 26, 5, 16, 16, Color.Tomato);
-  PositionButton:=RectangleABC.Create(CloseButton.Position.X - (CloseButton.Width + 5), CloseButton.Position.Y, 16, 16, color.CornflowerBlue);
-  SettingsButton:=RectangleABC.Create(10, 5, 16, 16, Color.DarkGray);
+  CloseButton:=RectangleABC.Create(window.Width - 41, 5, 16*2, 16, Color.Tomato);
+  SettingsButton:=RectangleABC.Create(10, 5, 16, 16, Color.CornflowerBlue);
+  PositionButton:=RectangleABC.Create(SettingsButton.Position.X + (SettingsButton.Width + 5), SettingsButton.Position.Y, 16, 16, color.CornflowerBlue);
   
   RectH:=RectangleABC.Create(10, 25, window.Width-20, 80);
   RectP:=RectangleABC.Create(RectH.Position.X, RectH.Position.Y + RectH.Height + 5, RectH.Width, 32);

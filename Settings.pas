@@ -1,7 +1,7 @@
 ﻿program kec_settings;
 uses ABCObjects, graphABC, System.Windows.Forms;
 
-var version: string = '2.5';
+var version: string = '2.6';
 
 var border, top_line, ButtonClose, ButtonReset, frame, bPinyin, bTrans, bWindow, bTheme, counter, cPlus, cMinus, bFont: RectangleABC;
 var caption, parTime, parPin, parTran, parTheme, parScreen, parFont: TextABC;
@@ -34,8 +34,8 @@ procedure form_window(); begin
   Window.SetSize(600, 470);
   Window.CenterOnScreen;
   border:=RectangleABC.Create(0, 0, Window.Width, Window.Height, Color.WhiteSmoke);
-  top_line:=RectangleABC.Create(10, 5, Window.Width - 20, 32);
-  ButtonClose:=RectangleABC.Create(top_line.Width - (16), top_line.Height - (16 + 3), 16, 16, Color.Tomato);
+  top_line:=RectangleABC.Create(5, 5, Window.Width - 10, 32);
+  ButtonClose:=RectangleABC.Create(top_line.Width - (16*2) - 5, top_line.Height - (16 + 3), 16*2, 16, Color.Tomato);
   ButtonClose.Text:='X';
   caption:=TextABC.Create(top_line.Position.X + 10, top_line.Position.Y + 4, 14, 'KanRichang - Параметры');
   cop:=TextABC.Create(border.Position.X + 20, border.Height - 42, 8, 'Программа: KanRichang (看日常)    Версия: ' + version + '     Автор: Мурзин Даниил Сергеевич');
